@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Veil Split Studios</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --black:#0a0a0a; --blood:#9b0000; --blood-2:#c4001a;
+      --white:#f5f5f5; --muted:#9ca3af;
+    }
+    body {
+      margin:0;
+      font-family:'Inter',Arial,sans-serif;
+      background:linear-gradient(135deg,var(--black),var(--blood-2));
+      color:var(--white);
+      line-height:1.7;
+      scroll-behavior:smooth;
+      font-size:17px;
+    }
+    section {padding:80px 20px;text-align:center}
+    h1,h2,h3 {
+      font-family:'Bebas Neue',sans-serif;
+      letter-spacing:1px;
+      margin:0 0 20px;
+      line-height:1.2;
+    }
+    h2 {font-size:36px}
+    h3 {font-size:22px}
+    .hero {
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      overflow:hidden;
+    }
+    .hero img {
+      max-width:300px;
+      margin-bottom:20px;
+      opacity:0;
+      animation:fadeInUp 1s ease forwards;
+    }
+    .studio-title {
+      font-size:clamp(40px,8vw,80px);
+      font-weight:900;
+      margin:0;
+      opacity:0;
+      animation:fadeInUp 1s ease forwards;
+      animation-delay:0.5s;
+    }
+    .muted.hero-text {
+      font-size:20px;
+      max-width:700px;
+      margin-top:15px;
+      opacity:0;
+      animation:fadeInUp 1s ease forwards;
+      animation-delay:1s;
+    }
+    .team {
+      display:grid;
+      gap:20px;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      max-width:800px;
+      margin:40px auto 0;
+    }
+    .team-member {
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:12px;
+      padding:20px;
+      opacity:0;
+      transform:translateY(20px);
+      transition:opacity .6s,transform .6s;
+    }
+    .projects {
+      display:grid;
+      gap:20px;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      max-width:1000px;
+      margin:0 auto;
+    }
+    .card {
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:12px;
+      padding:20px;
+      text-align:left;
+      transition:transform .3s,box-shadow .3s,border-color .3s;
+      opacity:0;
+      transform:translateY(20px);
+    }
+    .card:hover {
+      transform:translateY(-6px) scale(1.02);
+      box-shadow:0 10px 28px rgba(0,0,0,.45);
+      border-color:var(--blood);
+    }
+    footer {
+      padding:40px 20px;
+      text-align:center;
+      font-size:14px;
+      color:var(--muted);
+      border-top:1px solid rgba(255,255,255,.1);
+    }
+    a {color:var(--white);text-decoration:none}
+    a:hover {text-decoration:underline}
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {opacity:0; transform:translateY(20px)}
+      to {opacity:1; transform:translateY(0)}
+    }
+
+    /* Mobile Optimizations */
+    @media (max-width: 600px) {
+      section {padding:50px 15px}
+      body {font-size:16px; line-height:1.6}
+      .hero img {max-width:200px; display:block; margin:0 auto 20px}
+      h2 {font-size:28px}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <!-- Yeni logo -->
+    <img src="VeilSplitStudios-BlackWings.png" alt="Veil Split Studios Logo">
+    <h1 class="studio-title">VEIL SPLIT STUDIOS</h1>
+    <p class="muted hero-text">
+      Creating games that reveal life’s unseen struggles and silent truths.
+    </p>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>Who We Are</h2>
+    <p class="muted" style="max-width:700px;margin:0 auto">
+      We are a two-person independent studio, blending technology and creativity to deliver unique and impactful game experiences.
+    </p>
+    <div class="team">
+      <div class="team-member">
+        <h3>Kıvanç Fırtına</h3>
+        <p>Email: <a href="mailto:kvncfrtn@outlook.com">kvncfrtn@outlook.com</a></p>
+        <p><a href="https://www.linkedin.com/in/k%C4%B1van%C3%A7-f%C4%B1rt%C4%B1na-bbb792244/" target="_blank">LinkedIn</a></p>
+      </div>
+      <div class="team-member">
+        <h3>Sefa Tanrıverdi</h3>
+        <p>Email: <a href="mailto:tnrvrd.sefa@outlook.com">tnrvrd.sefa@outlook.com</a></p>
+        <p><a href="https://www.linkedin.com/in/sefa-tanrıverdi-327a86304" target="_blank">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Our Projects</h2>
+    <div class="projects">
+      <!-- Lights Out -->
+      <article class="card">
+        <h3>Lights Out</h3>
+        <p class="muted">
+          A story-driven tactical shooter set in 1960s Europe, where resistance fighters face enemy forces and their inner battles. 
+          Realistic combat (bullet drop, limb injuries) and stress systems blend with survival to expose the true cost of war.
+        </p>
+      </article>
+
+      <!-- Project Arson -->
+      <article class="card">
+        <h3>Grim School</h3>
+        <p class="muted">
+          A stealth thriller about an exhausted student pushed to the edge. 
+          Sneak through guarded university halls, gather incendiary tools, and choose: ignite chaos — or coerce professors and graduate.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © <span id="year"></span> Veil Split Studios — All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent=new Date().getFullYear();
+
+    // Scroll reveal for cards & team members
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, {threshold:0.15});
+
+    document.querySelectorAll('.card, .team-member').forEach(el=>{
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
